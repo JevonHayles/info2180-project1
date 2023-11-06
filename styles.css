@@ -1,11 +1,232 @@
-/* Add your CSS to this file */
+:root{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-size: 18px;
+}
+
 body {
     margin: 0;
     font-size: 16px;
+
+    display: grid;
+    grid-template-rows: 0.25fr 1fr 2fr 1.25fr 2.5fr 1.25fr 0.3fr;
+}
+
+main{
+    grid-row: 2/7;
 }
 
 .container {
     margin: 0 auto;
     max-width: 960px;
     width: 100%;
+}
+
+
+header{
+    background-color: white;
+    font-size: 18px;
+
+    grid-row: 1/2;
+}
+header h1{
+    float:left;
+}
+nav{
+    float: right;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    padding-top: 20px;
+    display: inline-block;
+}
+nav ul li a{
+    color: #6b7280;
+
+    padding-right: 10px;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: #5A67D8;
+}
+
+
+.overview-hero{
+    background-color: #E2E8F0;
+    
+    overflow: hidden;
+
+    grid-row: 2/3;
+}
+.overview-hero-text{
+    padding-top: 50px;
+}
+.overview-hero-image img{
+    width: 350px;
+    height: 200px;
+    padding: 50px;
+    padding-top: 20px;
+
+    float: left;
+}
+
+
+.learn-about{
+    background-color: white;
+
+    grid-row: 3/4;
+}
+.learn-about h2{
+    color: #48BB78;
+    font-size: 24px;
+}
+.learn-about h3{
+    color: #48BB78;
+    font-size: 21px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    padding-bottom: 30px;
+}
+.card{
+    border: #E2E8F0;
+    border-style: solid;
+    border-radius: 5px;
+    
+    box-shadow: 0 2px 5px grey;
+
+    width: 280px;
+    align-items: center;
+}
+.card-body{
+    padding-left: 8px;
+}
+.card img{
+    width: 250px;
+    height: 250px;
+
+    padding-left: 15px;
+}
+
+
+.testing{
+    background-color: #4A5568;
+    color: white;
+
+    overflow: hidden;
+
+    grid-row: 4/5;
+}
+.testing .container{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+.testing-desciption{
+    padding: 100px;
+
+    grid-column: 1/2;
+}
+.cta{
+    padding-left: 100px;
+    padding-top: 150px;
+
+    grid-column: 2/3;
+}
+.cta a{
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: #48BB78;
+    text-decoration: none;
+}
+
+
+.stories{
+    background-color: white;
+
+    grid-row: 5/6;
+}
+.stories .container{
+    overflow: hidden;
+
+    display: grid;
+    grid-row: 10% 90%;
+}
+.stories .container h2{
+    color: #5A67D8;
+
+    padding-top: 50px;
+    padding-left: 50px;
+}
+.article-body{
+    padding-top: 40px;
+}
+.article-body h3{
+    font-size: 18px;
+}
+.article-body p a{
+    color: #5A67D8;
+    text-decoration: none;
+}
+.stories .container article img{
+    float: left;
+
+    border-radius: 50%;
+    padding: 50px;
+
+    width: 180px;
+    height: 180px;
+}
+
+
+
+.newsletter{
+    background-color: #48BB78;
+    color: white;
+
+    overflow: hidden;
+
+    grid-row: 6/7;
+}
+.newsletter .container{  
+    width: 600px;
+    padding-bottom: 80px;
+}
+.newsletter .container h3{
+    text-align: center;
+}
+.form-group{
+    padding-right: 10px;
+    float: left;
+}
+form .button{
+    float: right;
+}
+input{
+    width: 350px;
+    height: 45px;
+
+    border: none;
+    border-radius: 3px;
+}
+button{
+    background-color: #5A67D8;
+    border: none;
+    border-radius: 3px;
+    width: 205px;
+    height: 45px;
+}
+
+
+footer{
+    background-color: #4A5568;
+    color: white;
+    
+    grid-row: 7/8;
 }
